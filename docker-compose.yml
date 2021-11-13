@@ -1,0 +1,12 @@
+
+version: "3.9"
+services:
+  osrm:
+    image: osrm/osrm-backend
+    container_name: osrm
+    restart: always
+    ports:
+      - 5000:5000
+    volumes:
+      - ./osrm_data:/data
+    command: "osrm-routed --max-matching-size 1000 --max-table-size 1000 --max-viaroute-size 1000 --algorithm mld /data/spain-latest.osrm"

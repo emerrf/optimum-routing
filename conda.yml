@@ -1,0 +1,12 @@
+name: devenv-vrpexemple
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.8
+  - pip==21.2.2
+  - numpy==1.21.2  
+  - matplotlib==3.4.3
+  - pip:
+      - ortools==9.1.9490
+
